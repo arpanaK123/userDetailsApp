@@ -51,6 +51,11 @@ code {
       display: flex;
     }
     .card-content {
+      .divider:not(:last-child) {
+        border-bottom: 1px solid lightgray;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+      }
       min-height: 140px;
       padding: 10px;
       border: 1px solid lightgray;
@@ -67,5 +72,27 @@ code {
         @extend .flex-align;
       }
     }
+  }
+}
+.create-user-btn {
+  text-align: center;
+  .btn-link {
+    background: dodgerblue;
+    border-radius: 16px;
+    margin: 15px 0;
+    &,
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// toast box styling
+.toast-row {
+  @extend .flex-align;
+  margin-top: 20px;
+  .toast-body {
+    text-align: center;
+    background-color: lightsteelblue;
   }
 }

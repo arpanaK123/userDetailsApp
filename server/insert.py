@@ -2,7 +2,6 @@
 import connect as connections
 con = connections.connect()
 
-
 def insertUser(username, userEmail, userPassword):
     try:
         if con is not None:
@@ -17,7 +16,6 @@ def insertUser(username, userEmail, userPassword):
     except Exception as e:
         return e
 
-
 def readData(userName):
     if con is not None:
         db = con["userDB"]
@@ -29,13 +27,11 @@ def readData(userName):
         else:
             return "UnRegisterd User"
 
-
 def getData(userEmail):
     if con is not None:
         db = con["userDB"]
         collection = db["user"]
         data = collection.find_one({"userEmail": userEmail})
-        # print("data: ", data)
         if data:
             return False
         else:

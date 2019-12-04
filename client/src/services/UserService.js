@@ -1,24 +1,23 @@
 const APP_URL = "http://192.168.43.37:5000";
 
 export const createUser = async user => {
-  const res = await fetch(`${APP_URL}/register`, {
+  const res = await fetch(`${APP_URL}/createUser`, {
     method: "POST",
     body: JSON.stringify({
-      "command":"SIGNUP",
-      "params" : user
-      }),
+      params: user
+    }),
     headers: {
-      "Content-type": "application/json; charset=UTF-8"
+      "Content-type": "application/json"
     }
   });
   return await res.json();
 };
 
 export const getUser = async userName => {
-  const res = await fetch(`${APP_URL}/details`, {
+  const res = await fetch(`${APP_URL}/searchUser`, {
     method: "GET",
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      "Content-type": "application/json",
       userName
     }
   });
