@@ -144,6 +144,7 @@ class CreateUser extends Component {
                 >
                   Cancel
                 </button>
+                <button className="btn btn-primary">login</button>
               </div>
             </form>
             <div className="search-user">

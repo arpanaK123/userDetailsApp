@@ -1,4 +1,4 @@
-const APP_URL = "http://192.168.43.37:5000";
+const APP_URL = "http://192.168.1.107:5000";
 
 export const createUser = async user => {
   const res = await fetch(`${APP_URL}/createUser`, {
